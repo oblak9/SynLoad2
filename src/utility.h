@@ -19,7 +19,62 @@ std::size_t numOfCompTypes = 0; // 4 for now
 std::size_t numOfHPUs = 0;
 std::size_t maxNumOfTasksInSchedule = 0;
 
+// MISC
+int compAmountMultiplicator = 1; // Default is 1, used to increase the amount of comp (if too low compared to comm time)
+
+// WINDOWS ENV
+std::string inputFileCommMatrix = "C:\\Users\\krpic\\Dropbox\\workspace\\SynLoad2\\input\\SynLoadTaskCommMatrix.txt";
+std::string inputFileCompAmounts = "C:\\Users\\krpic\\Dropbox\\workspace\\SynLoad2\\input\\SynLoadTaskCompAmounts.txt";
+std::string inputFileTaskOrder = "C:\\Users\\krpic\\Dropbox\\workspace\\SynLoad2\\input\\SynLoadTaskOrder.txt";
+std::string outputFilename = "C:\\Users\\krpic\\Dropbox\\workspace\\SynLoad2\\output\\OUT_P";
+std::string outputHTMLFilename = "C:\\Users\\krpic\\Dropbox\\workspace\\SynLoad2\\output\\Timeline.html";
+
+//// LINUX ENV
+//std::string inputFileCommMatrix = "/home/zdravak/clustershared/synload/input/SynLoadTaskCommMatrix.txt";
+//std::string inputFileCompAmounts = "/home/zdravak/clustershared/synload/input/SynLoadTaskCompAmounts.txt";
+//std::string inputFileTaskOrder = "/home/zdravak/clustershared/synload/input/SynLoadTaskOrder.txt";
+//std::string outputFilename = "/home/zdravak/clustershared/synload/output/OUT_P";
+//std::string outputHTMLFilename = "/home/zdravak/clustershared/synload/output/Timeline.html";
+
+/**** Header    and footer for the timeline visualization via the HTML file (the same exists in both Partitioning and Scheduling projects) ****/
+// The multiplicator for the time intervals that are stored to the HTML file (values can be really low, then the timeline ticks are not displayed, therefore, multiply all of them with this)
+double htmlFileTimeScalar = 1000;
+std::string htmlFileHeader = "<html>\n\
+  <head>\n\
+    <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n\
+    <script type=\"text/javascript\">\n\
+      google.charts.load('current', {'packages':['timeline']});\n\
+      google.charts.setOnLoadCallback(drawChart);\n\
+      function drawChart() {\n\
+        var container = document.getElementById('timeline');\n\
+        var chart = new google.visualization.Timeline(container);\n\
+        var dataTable = new google.visualization.DataTable();\n\
+\n\
+        dataTable.addColumn({ type: 'string', id: 'Processor' });\n\
+        dataTable.addColumn({ type: 'string', id: 'Task' });\n\
+		dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });\n\
+        dataTable.addColumn({ type: 'date', id: 'Start' });\n\
+        dataTable.addColumn({ type: 'date', id: 'End' });\n\
+        dataTable.addRows([\n";
+
+std::string htmlFileFooter = "\n]);\n\
+        chart.draw(dataTable);\n\
+      }\n\
+    </script>\n\
+  </head>\n\
+  <body>\n\
+    <div id=\"timeline\" style=\"height: 1000px;\"></div>\n\
+  </body>\n\
+</html>";
+
+struct sendsInfo
+{
+	std::size_t numOfChunks;
+};
+
 #define COMM_CHUNK_SIZE 2621440
+#define COMP_ITERATIONS_SINGLE_LOOP 10000
+#define DEBUG_HEAD_NODE true
 
 /****
  * FILENAME_CREATOR creates unique output filename for each process.
@@ -38,42 +93,35 @@ std::string filename_creator(int rank)
 	return c;
 }
 
-/****
- * MPI TIMESTAMP prints the current process MPI wallclock.
- * EXAMPLE:
+/**** STORE STRING TO A FILE
+ *
  */
-void printTimestamp (double stamp)
+void storeStringToFile(std::string stringToStore, std::string filename)
 {
-	//std::cout << MPI::Wtime() - stamp;
-	printf("%.4f", MPI_Wtime() - stamp);
-	//std::cout << MPI_Wtime() - stamp;
+	std::ofstream file;
+	file.open(filename.c_str());
+	if (file.is_open())
+	{
+		file << stringToStore;
+	}
+	else std::cout << "ERROR in opening file " << filename << std::endl;
 }
 
 /****
- * TIMESTAMP prints the current YMDHMS date as a time stamp.
- * EXAMPLE: 31 May 2001 09:45:54 AM
+ * GET MPI TIMESTAMP
  */
-void timestamp2 ( )
+double getTimestamp (double stamp)
 {
+	return (MPI_Wtime() - stamp);
+}
 
-# define TIME_SIZE 40
-
-	static char time_buffer[TIME_SIZE];
-	const struct std::tm *tm_ptr;
-	size_t len;
-	std::time_t now;
-
-	now = std::time ( NULL );
-	tm_ptr = std::localtime ( &now );
-
-	len = std::strftime ( time_buffer, TIME_SIZE, "%I:%M:%S ", tm_ptr );
-
-	std::cout << time_buffer; // << "\n";
-
-	return;
-
-# undef TIME_SIZE
-
+/****
+ * MPI TIMESTAMP prints the current process MPI wallclock.
+ */
+void printTimestamp (double stamp)
+{
+	//printf("%.4f", MPI_Wtime() - stamp);
+	std::cout << MPI_Wtime() - stamp;
 }
 
 /**** INITIALIZE 2D DYNAMIC ARRAY
@@ -128,6 +176,29 @@ bool does1DArrayContainElement(t *array, int numOfElements, t searchValue)
 	for (int i = 0; i < numOfElements; i++)
 	{
 		if (array[i] == searchValue) return true;
+	}
+	return false;
+}
+
+/**** CHECK IF 2D DYNAMIC ARRAY CONTAINS AN ELEMENT GREATER THAN SPECIFIC VALUE IN A SPECIFIC ROW OR COLUMN
+ *
+ */
+template<typename t>
+bool does2DArrayContainElementIn1DGreaterThan(t **array, int rowColumnID, int width, int height, t searchValue, bool row)
+{
+	if (row)
+	{
+		for (int i = 0; i < width; i++)
+		{
+			if (array[rowColumnID][i] > searchValue) return true;
+		}
+	}
+	else
+	{
+		for (int i = 0; i < height; i++)
+		{
+			if (array[i][rowColumnID] > searchValue) return true;
+		}
 	}
 	return false;
 }

@@ -3,6 +3,7 @@
 	<name>SynLoad2</name>
 	<comment></comment>
 	<projects>
+		<project>SynLoad2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,0 +1,634 @@
+*****************************
+Reporting parameters: 	 numOfTasks 	 numOfHPUs 	 numOfCompTypes 	 maxNumOfTasksInSchedule
+Reporting parameters: 	502	12	4	68
+Num of allocated tasks to this HPU: 54
+Tasks allocated to this HPU: 9	200	201	202	203	188	204	189	190	205	191	206	192	207	193	10	27	28	29	30	34	31	35	182	36	177	183	37	184	38	178	251	264	325	326	327	328	335	329	336	330	337	210	52	73	74	75	97	98	99	100	101	102	103	
+Node name: DESKTOP-KRPIC
+0.0000785	START
+*****************************
+				RECV: T9(P6) from T0(P0): chunks: 54 + 1
+				Task 9 recv buffer: 143422128, size in MB: 547
+0.0002420	T9	start receive from T0
+0.0003399	T9	receives posted.
+78.9568958	T9	finished all receives.
+78.9569315	T9	comp amounts	0	2	7	7 started.
+82.2610989	T9	comp amounts	0	2	7	7 finished.
+				Task 9 send buffer: 454637386, size in MB: 1734
+82.2611260	T9	start send to T188
+82.2611593	T9	start send to T194
+82.2613684	T9	start send to T200
+82.2614434	T9	sends posted.
+82.2614472	T9	finished all sends.
+				RECV: T200(P6) from T9(P6): chunks: 60 + 1
+				Task 200 recv buffer: 157893525, size in MB: 602
+82.2615191	T200	start receive from T9
+82.3037808	T200	receives posted.
+82.3038052	T200	finished all receives.
+82.3038318	T200	comp amounts	4	3	8	9 started.
+87.0062735	T200	comp amounts	4	3	8	9 finished.
+				Task 200 send buffer: 660383201, size in MB: 2519
+87.0063010	T200	start send to T201
+87.0063310	T200	start send to T266
+87.0065446	T200	start send to T270
+87.0065708	T200	start send to T273
+87.0066644	T200	sends posted.
+87.0066676	T200	finished all sends.
+				RECV: T201(P6) from T200(P6): chunks: 66 + 1
+				Task 201 recv buffer: 174039760, size in MB: 663
+87.0067639	T201	start receive from T200
+87.0482709	T201	receives posted.
+87.0482950	T201	finished all receives.
+87.0483208	T201	comp amounts	2	9	3	1 started.
+89.7389654	T201	comp amounts	2	9	3	1 finished.
+				Task 201 send buffer: 130667511, size in MB: 498
+89.7389891	T201	start send to T202
+89.7390110	T201	sends posted.
+89.7390138	T201	finished all sends.
+				RECV: T202(P6) from T201(P6): chunks: 49 + 1
+				Task 202 recv buffer: 130667511, size in MB: 498
+89.7390506	T202	start receive from T201
+89.7684335	T202	receives posted.
+89.7684566	T202	finished all receives.
+89.7684825	T202	comp amounts	3	9	0	3 started.
+92.4604177	T202	comp amounts	3	9	0	3 finished.
+				Task 202 send buffer: 156804317, size in MB: 598
+92.4604425	T202	start send to T203
+92.4604614	T202	sends posted.
+92.4604642	T202	finished all sends.
+				RECV: T203(P6) from T202(P6): chunks: 59 + 1
+				Task 203 recv buffer: 156804317, size in MB: 598
+92.4605004	T203	start receive from T202
+92.5010607	T203	receives posted.
+92.5010792	T203	finished all receives.
+92.5010962	T203	comp amounts	1	9	9	9 started.
+97.9811813	T203	comp amounts	1	9	9	9 finished.
+				Task 203 send buffer: 139277107, size in MB: 531
+97.9812053	T203	start send to T204
+97.9812364	T203	sends posted.
+97.9812395	T203	finished all sends.
+				RECV: T188(P6) from T9(P6): chunks: 67 + 1
+				Task 188 recv buffer: 175907536, size in MB: 671
+97.9812675	T188	start receive from T9
+98.0290089	T188	receives posted.
+98.0290353	T188	finished all receives.
+98.0290593	T188	comp amounts	2	0	8	3 started.
+100.6821195	T188	comp amounts	2	0	8	3 finished.
+				Task 188 send buffer: 130667511, size in MB: 498
+100.6821445	T188	start send to T189
+100.6821655	T188	sends posted.
+100.6821684	T188	finished all sends.
+				RECV: T204(P6) from T203(P6): chunks: 53 + 1
+				Task 204 recv buffer: 139277107, size in MB: 531
+100.6821907	T204	start receive from T203
+100.7192153	T204	receives posted.
+100.7192437	T204	finished all receives.
+100.7192646	T204	comp amounts	0	4	9	8 started.
+104.9742694	T204	comp amounts	0	4	9	8 finished.
+				Task 204 send buffer: 147239993, size in MB: 561
+104.9742941	T204	start send to T205
+104.9743666	T204	sends posted.
+104.9743698	T204	finished all sends.
+				RECV: T189(P6) from T188(P6): chunks: 49 + 1
+				Task 189 recv buffer: 130667511, size in MB: 498
+104.9743941	T189	start receive from T188
+105.0115430	T189	receives posted.
+105.0115707	T189	finished all receives.
+105.0115992	T189	comp amounts	0	6	3	5 started.
+107.7192554	T189	comp amounts	0	6	3	5 finished.
+				Task 189 send buffer: 135606829, size in MB: 517
+107.7192816	T189	start send to T190
+107.7192999	T189	sends posted.
+107.7193026	T189	finished all sends.
+				RECV: T190(P6) from T189(P6): chunks: 51 + 1
+				Task 190 recv buffer: 135606829, size in MB: 517
+107.7193249	T190	start receive from T189
+107.7558447	T190	receives posted.
+107.7558674	T190	finished all receives.
+107.7558915	T190	comp amounts	3	0	4	1 started.
+109.3215186	T190	comp amounts	3	0	4	1 finished.
+				Task 190 send buffer: 134915293, size in MB: 514
+109.3215441	T190	start send to T191
+109.3215674	T190	sends posted.
+109.3215703	T190	finished all sends.
+				RECV: T205(P6) from T204(P6): chunks: 56 + 1
+				Task 205 recv buffer: 147239993, size in MB: 561
+109.3215933	T205	start receive from T204
+109.3609654	T205	receives posted.
+109.3609900	T205	finished all receives.
+109.3610118	T205	comp amounts	0	1	8	0 started.
+111.2111198	T205	comp amounts	0	1	8	0 finished.
+				Task 205 send buffer: 134915293, size in MB: 514
+111.2111458	T205	start send to T206
+111.2111642	T205	sends posted.
+111.2111669	T205	finished all sends.
+				RECV: T191(P6) from T190(P6): chunks: 51 + 1
+				Task 191 recv buffer: 134915293, size in MB: 514
+111.2111892	T191	start receive from T190
+111.2476071	T191	receives posted.
+111.2476308	T191	finished all receives.
+111.2476527	T191	comp amounts	0	5	4	2 started.
+113.3628436	T191	comp amounts	0	5	4	2 finished.
+				Task 191 send buffer: 175236710, size in MB: 668
+113.3628690	T191	start send to T192
+113.3629441	T191	sends posted.
+113.3629473	T191	finished all sends.
+				RECV: T206(P6) from T205(P6): chunks: 51 + 1
+				Task 206 recv buffer: 134915293, size in MB: 514
+113.3629718	T206	start receive from T205
+113.3996634	T206	receives posted.
+113.3996881	T206	finished all receives.
+113.3997102	T206	comp amounts	0	7	3	3 started.
+115.8584092	T206	comp amounts	0	7	3	3 finished.
+				Task 206 send buffer: 153816924, size in MB: 586
+115.8584327	T206	start send to T207
+115.8584521	T206	sends posted.
+115.8584548	T206	finished all sends.
+				RECV: T192(P6) from T191(P6): chunks: 66 + 1
+				Task 192 recv buffer: 175236710, size in MB: 668
+115.8584768	T192	start receive from T191
+115.8975914	T192	receives posted.
+115.8976145	T192	finished all receives.
+115.8976349	T192	comp amounts	3	4	5	5 started.
+119.1871305	T192	comp amounts	3	4	5	5 finished.
+				Task 192 send buffer: 598836772, size in MB: 2284
+119.1871547	T192	start send to T193
+119.1871908	T192	start send to T391
+119.1874296	T192	start send to T396
+119.1875236	T192	start send to T402
+119.1875501	T192	sends posted.
+119.1875530	T192	finished all sends.
+				RECV: T207(P6) from T206(P6): chunks: 58 + 1
+				Task 207 recv buffer: 153816924, size in MB: 586
+119.1875770	T207	start receive from T206
+119.2263349	T207	receives posted.
+119.2263585	T207	finished all receives.
+119.2263833	T207	comp amounts	4	3	8	8 started.
+123.7168501	T207	comp amounts	4	3	8	8 finished.
+				Task 207 send buffer: 143422128, size in MB: 547
+123.7168718	T207	start send to T10
+123.7168907	T207	sends posted.
+123.7168934	T207	finished all sends.
+				RECV: T193(P6) from T192(P6): chunks: 69 + 1
+				Task 193 recv buffer: 182236217, size in MB: 695
+123.7169158	T193	start receive from T192
+123.7578422	T193	receives posted.
+123.7578616	T193	finished all receives.
+123.7578833	T193	comp amounts	8	0	2	6 started.
+126.7845886	T193	comp amounts	8	0	2	6 finished.
+				Task 193 send buffer: 180167639, size in MB: 687
+126.7846115	T193	start send to T10
+126.7846466	T193	sends posted.
+126.7846497	T193	finished all sends.
+				RECV: T10(P6) from T193(P6): chunks: 68 + 1
+				RECV: T10(P6) from T199(P1): chunks: 51 + 1
+				RECV: T10(P6) from T207(P6): chunks: 54 + 1
+				Task 10 recv buffer: 458928684, size in MB: 1750
+126.7846747	T10	start receive from T193
+126.8250753	T10	start receive from T199
+126.8251157	T10	start receive from T207
+126.8574091	T10	receives posted.
+146.5980621	T10	finished all receives.
+146.5980866	T10	comp amounts	1	5	6	4 started.
+149.6858873	T10	comp amounts	1	5	6	4 finished.
+				Task 10 send buffer: 714049058, size in MB: 2723
+149.6859131	T10	start send to T11
+149.6859394	T10	start send to T13
+149.6859548	T10	start send to T19
+149.6859691	T10	start send to T27
+149.6860296	T10	start send to T34
+149.6860482	T10	sends posted.
+149.6860509	T10	finished all sends.
+				RECV: T27(P6) from T10(P6): chunks: 41 + 1
+				Task 27 recv buffer: 109655359, size in MB: 418
+149.6860730	T27	start receive from T10
+149.7112343	T27	receives posted.
+149.7112521	T27	finished all receives.
+149.7112743	T27	comp amounts	2	6	8	8 started.
+154.3944407	T27	comp amounts	2	6	8	8 finished.
+				Task 27 send buffer: 134915293, size in MB: 514
+154.3944662	T27	start send to T28
+154.3944827	T27	sends posted.
+154.3944855	T27	finished all sends.
+				RECV: T28(P6) from T27(P6): chunks: 51 + 1
+				Task 28 recv buffer: 134915293, size in MB: 514
+154.3945072	T28	start receive from T27
+154.4259253	T28	receives posted.
+154.4259447	T28	finished all receives.
+154.4259651	T28	comp amounts	1	8	7	9 started.
+159.3341295	T28	comp amounts	1	8	7	9 finished.
+				Task 28 send buffer: 95769329, size in MB: 365
+159.3341556	T28	start send to T29
+159.3342228	T28	sends posted.
+159.3342262	T28	finished all sends.
+				RECV: T29(P6) from T28(P6): chunks: 36 + 1
+				Task 29 recv buffer: 95769329, size in MB: 365
+159.3342492	T29	start receive from T28
+159.3592975	T29	receives posted.
+159.3593220	T29	finished all receives.
+159.3593456	T29	comp amounts	7	8	4	2 started.
+163.1924414	T29	comp amounts	7	8	4	2 finished.
+				Task 29 send buffer: 130667511, size in MB: 498
+163.1924656	T29	start send to T30
+163.1924836	T29	sends posted.
+163.1924864	T29	finished all sends.
+				RECV: T30(P6) from T29(P6): chunks: 49 + 1
+				Task 30 recv buffer: 130667511, size in MB: 498
+163.1925083	T30	start receive from T29
+163.2271111	T30	receives posted.
+163.2271350	T30	finished all receives.
+163.2271568	T30	comp amounts	0	8	1	1 started.
+165.0204107	T30	comp amounts	0	8	1	1 finished.
+				Task 30 send buffer: 175907536, size in MB: 671
+165.0204352	T30	start send to T31
+165.0204683	T30	sends posted.
+165.0204714	T30	finished all sends.
+				RECV: T34(P6) from T10(P6): chunks: 68 + 1
+				Task 34 recv buffer: 178288328, size in MB: 680
+165.0204944	T34	start receive from T10
+165.0621270	T34	receives posted.
+165.0621510	T34	finished all receives.
+165.0621757	T34	comp amounts	8	7	4	3 started.
+169.1209114	T34	comp amounts	8	7	4	3 finished.
+				Task 34 send buffer: 140927041, size in MB: 537
+169.1209502	T34	start send to T35
+169.1209773	T34	sends posted.
+169.1209817	T34	finished all sends.
+				RECV: T31(P6) from T30(P6): chunks: 67 + 1
+				Task 31 recv buffer: 175907536, size in MB: 671
+169.1210167	T31	start receive from T30
+169.1797559	T31	receives posted.
+169.1797860	T31	finished all receives.
+169.1798205	T31	comp amounts	2	6	6	9 started.
+174.5032579	T31	comp amounts	2	6	6	9 finished.
+				Task 31 send buffer: 503556865, size in MB: 1920
+174.5032886	T31	start send to T172
+174.5033272	T31	start send to T177
+174.5034113	T31	start send to T182
+174.5034493	T31	sends posted.
+174.5034535	T31	finished all sends.
+				RECV: T35(P6) from T34(P6): chunks: 53 + 1
+				Task 35 recv buffer: 140927041, size in MB: 537
+174.5034866	T35	start receive from T34
+174.5364983	T35	receives posted.
+174.5365230	T35	finished all receives.
+174.5365494	T35	comp amounts	7	1	4	7 started.
+178.5222085	T35	comp amounts	7	1	4	7 finished.
+				Task 35 send buffer: 95769329, size in MB: 365
+178.5222335	T35	start send to T36
+178.5222507	T35	sends posted.
+178.5222535	T35	finished all sends.
+				RECV: T182(P6) from T31(P6): chunks: 68 + 1
+				Task 182 recv buffer: 178288328, size in MB: 680
+178.5222756	T182	start receive from T31
+178.5632449	T182	receives posted.
+178.5632696	T182	finished all receives.
+178.5632953	T182	comp amounts	2	2	2	5 started.
+180.9444785	T182	comp amounts	2	2	2	5 finished.
+				Task 182 send buffer: 154166099, size in MB: 588
+180.9445026	T182	start send to T183
+180.9445749	T182	sends posted.
+180.9445782	T182	finished all sends.
+				RECV: T36(P6) from T35(P6): chunks: 36 + 1
+				Task 36 recv buffer: 95769329, size in MB: 365
+180.9446016	T36	start receive from T35
+180.9710379	T36	receives posted.
+180.9710621	T36	finished all receives.
+180.9710890	T36	comp amounts	4	4	5	2 started.
+184.3072916	T36	comp amounts	4	4	5	2 finished.
+				Task 36 send buffer: 939122489, size in MB: 3582
+184.3073328	T36	start send to T37
+184.3073638	T36	start send to T441
+184.3074952	T36	start send to T446
+184.3075228	T36	start send to T451
+184.3076094	T36	start send to T456
+184.3076351	T36	start send to T461
+184.3077379	T36	sends posted.
+184.3077447	T36	finished all sends.
+				RECV: T177(P6) from T31(P6): chunks: 54 + 1
+				Task 177 recv buffer: 143032320, size in MB: 545
+184.3077816	T177	start receive from T31
+184.3519690	T177	receives posted.
+184.3519957	T177	finished all receives.
+184.3520199	T177	comp amounts	5	9	3	7 started.
+189.9427659	T177	comp amounts	5	9	3	7 finished.
+				Task 177 send buffer: 180818804, size in MB: 689
+189.9427928	T177	start send to T178
+189.9428428	T177	sends posted.
+189.9428472	T177	finished all sends.
+				RECV: T183(P6) from T182(P6): chunks: 58 + 1
+				Task 183 recv buffer: 154166099, size in MB: 588
+189.9428825	T183	start receive from T182
+189.9808956	T183	receives posted.
+189.9809251	T183	finished all receives.
+189.9809514	T183	comp amounts	7	1	2	3 started.
+192.5840524	T183	comp amounts	7	1	2	3 finished.
+				Task 183 send buffer: 182236217, size in MB: 695
+192.5840762	T183	start send to T184
+192.5841495	T183	sends posted.
+192.5841525	T183	finished all sends.
+				RECV: T37(P6) from T36(P6): chunks: 68 + 1
+				Task 37 recv buffer: 180167639, size in MB: 687
+192.5841755	T37	start receive from T36
+192.6250320	T37	receives posted.
+192.6250633	T37	finished all receives.
+192.6250881	T37	comp amounts	5	9	0	1 started.
+195.2387705	T37	comp amounts	5	9	0	1 finished.
+				Task 37 send buffer: 180167639, size in MB: 687
+195.2387946	T37	start send to T38
+195.2388199	T37	sends posted.
+195.2388228	T37	finished all sends.
+				RECV: T184(P6) from T183(P6): chunks: 69 + 1
+				Task 184 recv buffer: 182236217, size in MB: 695
+195.2388463	T184	start receive from T183
+195.2830288	T184	receives posted.
+195.2830535	T184	finished all receives.
+195.2830782	T184	comp amounts	1	9	8	8 started.
+200.3952464	T184	comp amounts	1	9	8	8 finished.
+				Task 184 send buffer: 174039760, size in MB: 663
+200.3952728	T184	start send to T185
+200.3953026	T184	sends posted.
+200.3953056	T184	finished all sends.
+				RECV: T38(P6) from T37(P6): chunks: 68 + 1
+				Task 38 recv buffer: 180167639, size in MB: 687
+200.3953280	T38	start receive from T37
+200.4387938	T38	receives posted.
+200.4388209	T38	finished all receives.
+200.4388498	T38	comp amounts	6	2	2	3 started.
+202.8863568	T38	comp amounts	6	2	2	3 finished.
+				Task 38 send buffer: 720714595, size in MB: 2749
+202.8863954	T38	start send to T251
+202.8864196	T38	start send to T256
+202.8864417	T38	start send to T260
+202.8865171	T38	start send to T263
+202.8867771	T38	start send to T264
+202.8868103	T38	sends posted.
+202.8868139	T38	finished all sends.
+				RECV: T178(P6) from T177(P6): chunks: 68 + 1
+				Task 178 recv buffer: 180818804, size in MB: 689
+202.8868496	T178	start receive from T177
+202.9423876	T178	receives posted.
+202.9424137	T178	finished all receives.
+202.9424404	T178	comp amounts	9	7	9	1 started.
+207.8604552	T178	comp amounts	9	7	9	1 finished.
+				Task 178 send buffer: 95769329, size in MB: 365
+207.8604919	T178	start send to T179
+207.8605366	T178	sends posted.
+207.8605398	T178	finished all sends.
+				RECV: T251(P6) from T38(P6): chunks: 61 + 1
+				Task 251 recv buffer: 161406517, size in MB: 615
+207.8605908	T251	start receive from T38
+207.9299415	T251	receives posted.
+207.9299678	T251	finished all receives.
+207.9299915	T251	comp amounts	7	0	2	6 started.
+210.8290881	T251	comp amounts	7	0	2	6 finished.
+				Task 251 send buffer: 115641679, size in MB: 441
+210.8291122	T251	start send to T252
+210.8291362	T251	sends posted.
+210.8291393	T251	finished all sends.
+				RECV: T264(P6) from T38(P6): chunks: 54 + 1
+				Task 264 recv buffer: 143032320, size in MB: 545
+210.8291629	T264	start receive from T38
+210.8682017	T264	receives posted.
+210.8682261	T264	finished all receives.
+210.8682497	T264	comp amounts	7	6	6	0 started.
+214.3880473	T264	comp amounts	7	6	6	0 finished.
+				Task 264 send buffer: 135139688, size in MB: 515
+214.3880732	T264	start send to T265
+214.3881015	T264	sends posted.
+214.3881046	T264	finished all sends.
+				RECV: T325(P6) from T169(P2): chunks: 60 + 1
+				Task 325 recv buffer: 157893525, size in MB: 602
+214.3881276	T325	start receive from T169
+214.3881415	T325	receives posted.
+280.8186326	T325	finished all receives.
+280.8186697	T325	comp amounts	7	3	5	8 started.
+286.3057129	T325	comp amounts	7	3	5	8 finished.
+				Task 325 send buffer: 143032320, size in MB: 545
+286.3057489	T325	start send to T326
+286.3058357	T325	sends posted.
+286.3058406	T325	finished all sends.
+				RECV: T326(P6) from T325(P6): chunks: 54 + 1
+				Task 326 recv buffer: 143032320, size in MB: 545
+286.3058768	T326	start receive from T325
+286.3414635	T326	receives posted.
+286.3414931	T326	finished all receives.
+286.3415262	T326	comp amounts	5	0	2	2 started.
+288.2909093	T326	comp amounts	5	0	2	2 finished.
+				Task 326 send buffer: 175236710, size in MB: 668
+288.2909363	T326	start send to T327
+288.2909602	T326	sends posted.
+288.2909631	T326	finished all sends.
+				RECV: T327(P6) from T326(P6): chunks: 66 + 1
+				RECV: T327(P6) from T364(P2): chunks: 42 + 1
+				Task 327 recv buffer: 287614172, size in MB: 1097
+288.2909881	T327	start receive from T326
+288.3330024	T327	start receive from T364
+288.3330527	T327	receives posted.
+288.3853544	T327	finished all receives.
+288.3853858	T327	comp amounts	2	6	2	6 started.
+291.8472540	T327	comp amounts	2	6	2	6 finished.
+				Task 327 send buffer: 143422128, size in MB: 547
+291.8472872	T327	start send to T328
+291.8473200	T327	sends posted.
+291.8473245	T327	finished all sends.
+				RECV: T328(P6) from T327(P6): chunks: 54 + 1
+				Task 328 recv buffer: 143422128, size in MB: 547
+291.8473624	T328	start receive from T327
+291.8850054	T328	receives posted.
+291.8850339	T328	finished all receives.
+291.8850611	T328	comp amounts	4	7	6	5 started.
+296.4672971	T328	comp amounts	4	7	6	5 finished.
+				Task 328 send buffer: 146931974, size in MB: 560
+296.4673217	T328	start send to T329
+296.4673415	T328	sends posted.
+296.4673444	T328	finished all sends.
+				RECV: T335(P6) from T334(P1): chunks: 59 + 1
+				Task 335 recv buffer: 155894415, size in MB: 594
+296.4673669	T335	start receive from T334
+296.4673855	T335	receives posted.
+300.4443120	T335	finished all receives.
+300.4443535	T335	comp amounts	3	7	1	8 started.
+304.5109447	T335	comp amounts	3	7	1	8 finished.
+				Task 335 send buffer: 129963393, size in MB: 495
+304.5109716	T335	start send to T336
+304.5110426	T335	sends posted.
+304.5110459	T335	finished all sends.
+				RECV: T329(P6) from T328(P6): chunks: 56 + 1
+				Task 329 recv buffer: 146931974, size in MB: 560
+304.5110697	T329	start receive from T328
+304.5467499	T329	receives posted.
+304.5467712	T329	finished all receives.
+304.5467930	T329	comp amounts	8	0	7	7 started.
+308.8621565	T329	comp amounts	8	0	7	7 finished.
+				Task 329 send buffer: 135338917, size in MB: 516
+308.8621811	T329	start send to T330
+308.8622024	T329	sends posted.
+308.8622055	T329	finished all sends.
+				RECV: T336(P6) from T335(P6): chunks: 49 + 1
+				Task 336 recv buffer: 129963393, size in MB: 495
+308.8622286	T336	start receive from T335
+308.8917353	T336	receives posted.
+308.8917587	T336	finished all receives.
+308.8917849	T336	comp amounts	9	2	3	3 started.
+312.0589725	T336	comp amounts	9	2	3	3 finished.
+				Task 336 send buffer: 161406517, size in MB: 615
+312.0589977	T336	start send to T337
+312.0590351	T336	sends posted.
+312.0590384	T336	finished all sends.
+				RECV: T330(P6) from T329(P6): chunks: 51 + 1
+				Task 330 recv buffer: 135338917, size in MB: 516
+312.0590636	T330	start receive from T329
+312.0909715	T330	receives posted.
+312.0909912	T330	finished all receives.
+312.0910148	T330	comp amounts	9	7	5	1 started.
+316.1367055	T330	comp amounts	9	7	5	1 finished.
+				Task 330 send buffer: 178121080, size in MB: 679
+316.1367310	T330	start send to T331
+316.1367578	T330	sends posted.
+316.1367609	T330	finished all sends.
+				RECV: T337(P6) from T336(P6): chunks: 61 + 1
+				Task 337 recv buffer: 161406517, size in MB: 615
+316.1367849	T337	start receive from T336
+316.1810988	T337	receives posted.
+316.1811252	T337	finished all receives.
+316.1811497	T337	comp amounts	6	6	3	8 started.
+320.5886995	T337	comp amounts	6	6	3	8 finished.
+				Task 337 send buffer: 136623685, size in MB: 521
+320.5887263	T337	start send to T338
+320.5887523	T337	sends posted.
+320.5887554	T337	finished all sends.
+				RECV: T210(P6) from T209(P10): chunks: 60 + 1
+				Task 210 recv buffer: 157893525, size in MB: 602
+320.5887796	T210	start receive from T209
+320.5887896	T210	receives posted.
+336.5640784	T210	finished all receives.
+336.5641180	T210	comp amounts	5	6	2	4 started.
+340.0859019	T210	comp amounts	5	6	2	4 finished.
+				Task 210 send buffer: 139277107, size in MB: 531
+340.0859428	T210	start send to T211
+340.0859821	T210	sends posted.
+340.0859870	T210	finished all sends.
+				RECV: T52(P6) from T51(P9): chunks: 56 + 1
+				Task 52 recv buffer: 147239993, size in MB: 561
+340.0860289	T52	start receive from T51
+340.0860568	T52	receives posted.
+340.1783510	T52	finished all receives.
+340.1783867	T52	comp amounts	6	4	5	0 started.
+343.1517295	T52	comp amounts	6	4	5	0 finished.
+				Task 52 send buffer: 157893525, size in MB: 602
+343.1517594	T52	start send to T53
+343.1517885	T52	sends posted.
+343.1517926	T52	finished all sends.
+				RECV: T73(P6) from T5(P2): chunks: 54 + 1
+				Task 73 recv buffer: 143032320, size in MB: 545
+343.1518228	T73	start receive from T5
+343.1518399	T73	receives posted.
+369.5714263	T73	finished all receives.
+369.5714754	T73	comp amounts	8	1	8	9 started.
+375.6606150	T73	comp amounts	8	1	8	9 finished.
+				Task 73 send buffer: 134915293, size in MB: 514
+375.6606443	T73	start send to T74
+375.6606675	T73	sends posted.
+375.6606715	T73	finished all sends.
+				RECV: T74(P6) from T73(P6): chunks: 51 + 1
+				Task 74 recv buffer: 134915293, size in MB: 514
+375.6607028	T74	start receive from T73
+375.6951645	T74	receives posted.
+375.6951906	T74	finished all receives.
+375.6952178	T74	comp amounts	5	5	0	2 started.
+378.4515937	T74	comp amounts	5	5	0	2 finished.
+				Task 74 send buffer: 178080710, size in MB: 679
+378.4516229	T74	start send to T75
+378.4516518	T74	sends posted.
+378.4516558	T74	finished all sends.
+				RECV: T75(P6) from T74(P6): chunks: 67 + 1
+				Task 75 recv buffer: 178080710, size in MB: 679
+378.4516870	T75	start receive from T74
+378.4969467	T75	receives posted.
+378.4969727	T75	finished all receives.
+378.4969991	T75	comp amounts	1	0	2	0 started.
+379.1993305	T75	comp amounts	1	0	2	0 finished.
+				Task 75 send buffer: 157893525, size in MB: 602
+379.1993590	T75	start send to T69
+379.1993902	T75	sends posted.
+379.1993942	T75	finished all sends.
+				RECV: T97(P6) from T80(P2): chunks: 51 + 1
+				Task 97 recv buffer: 135606829, size in MB: 517
+379.1994254	T97	start receive from T80
+379.1994432	T97	receives posted.
+379.2782472	T97	finished all receives.
+379.2782883	T97	comp amounts	0	7	1	6 started.
+382.2365783	T97	comp amounts	0	7	1	6 finished.
+				Task 97 send buffer: 164832215, size in MB: 628
+382.2366083	T97	start send to T98
+382.2366803	T97	sends posted.
+382.2366835	T97	finished all sends.
+				RECV: T98(P6) from T97(P6): chunks: 62 + 1
+				Task 98 recv buffer: 164832215, size in MB: 628
+382.2367070	T98	start receive from T97
+382.2825880	T98	receives posted.
+382.2826197	T98	finished all receives.
+382.2826552	T98	comp amounts	2	3	0	6 started.
+384.5191586	T98	comp amounts	2	3	0	6 finished.
+				Task 98 send buffer: 129963393, size in MB: 495
+384.5191817	T98	start send to T99
+384.5192292	T98	sends posted.
+384.5192324	T98	finished all sends.
+				RECV: T99(P6) from T98(P6): chunks: 49 + 1
+				Task 99 recv buffer: 129963393, size in MB: 495
+384.5192560	T99	start receive from T98
+384.5506250	T99	receives posted.
+384.5506483	T99	finished all receives.
+384.5506736	T99	comp amounts	2	1	3	8 started.
+387.4253025	T99	comp amounts	2	1	3	8 finished.
+				Task 99 send buffer: 135338917, size in MB: 516
+387.4253260	T99	start send to T100
+387.4253460	T99	sends posted.
+387.4253489	T99	finished all sends.
+				RECV: T100(P6) from T99(P6): chunks: 51 + 1
+				Task 100 recv buffer: 135338917, size in MB: 516
+387.4253717	T100	start receive from T99
+387.4571432	T100	receives posted.
+387.4571684	T100	finished all receives.
+387.4571952	T100	comp amounts	6	6	8	4 started.
+392.3075833	T100	comp amounts	6	6	8	4 finished.
+				Task 100 send buffer: 161406517, size in MB: 615
+392.3076092	T100	start send to T101
+392.3076329	T100	sends posted.
+392.3076358	T100	finished all sends.
+				RECV: T101(P6) from T100(P6): chunks: 61 + 1
+				Task 101 recv buffer: 161406517, size in MB: 615
+392.3076588	T101	start receive from T100
+392.3523665	T101	receives posted.
+392.3523922	T101	finished all receives.
+392.3524165	T101	comp amounts	5	8	1	8 started.
+396.4883298	T101	comp amounts	5	8	1	8 finished.
+				Task 101 send buffer: 135606829, size in MB: 517
+396.4883543	T101	start send to T102
+396.4883767	T101	sends posted.
+396.4883796	T101	finished all sends.
+				RECV: T102(P6) from T101(P6): chunks: 51 + 1
+				Task 102 recv buffer: 135606829, size in MB: 517
+396.4884019	T102	start receive from T101
+396.5242712	T102	receives posted.
+396.5242958	T102	finished all receives.
+396.5243216	T102	comp amounts	8	4	1	3 started.
+399.4330915	T102	comp amounts	8	4	1	3 finished.
+				Task 102 send buffer: 156804317, size in MB: 598
+399.4331149	T102	start send to T103
+399.4331855	T102	sends posted.
+399.4331887	T102	finished all sends.
+				RECV: T103(P6) from T102(P6): chunks: 59 + 1
+				Task 103 recv buffer: 156804317, size in MB: 598
+399.4332126	T103	start receive from T102
+399.4766584	T103	receives posted.
+399.4766890	T103	finished all receives.
+399.4767111	T103	comp amounts	6	8	9	2 started.
+404.2494091	T103	comp amounts	6	8	9	2 finished.
+				Task 103 send buffer: 175236710, size in MB: 668
+404.2494336	T103	start send to T81
+404.2494672	T103	sends posted.
+404.2494740	T103	finished all sends.
+506.0579229	FINISH
+*****************************
+

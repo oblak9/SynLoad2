@@ -41,6 +41,7 @@ void getParamsFromTxtFiles(std::string compAmountsFilename, std::string schedule
 					numOfCompTypes++;
 				}
 			}
+
 			numOfTasks++;
 		}
 	}
@@ -197,23 +198,8 @@ void allocateTasks(int* members, int rank, int **schedule)
 	}
 }
 
-/**** GET A HPU ID WHICH RUNS A GIVEN TASK
- *
- * ****/
-int findHPUForTaskInSchedule(int **schedule, std::size_t numOfHPUs, std::size_t maxNumTasksInSchedule, int taskID)
-{
-	for (int i = 0; i < numOfHPUs; i++)
-	{
-		for (int j = 0; j < maxNumTasksInSchedule; j++)
-		{
-			if ( schedule[i][j] == taskID ) return i;
-		}
-	}
-	return -1;
-}
-
-
 /**** STARTS A SCHEDULE FOR THE CALLING PROCESS
+ * TODO: Create two versions of it: DAG and MIXED
  * Runs all the necessary functions for each task
  * Takes Task as an input
  * iterator for multiple tasks on one process
@@ -224,13 +210,31 @@ int findHPUForTaskInSchedule(int **schedule, std::size_t numOfHPUs, std::size_t 
  * type of computation
  * initial timestamp
  * ****/
-void runSchedule(int rank, Task task, int taskCounter, int* members, MPI_Request& request, int **commMatrix, int **schedule, int **compAmounts, int *commDataChunk, double stamp)
+void runSchedule(	int rank,
+					Task task,
+					int taskCounter,
+					int* members,
+					MPI_Request *sendRequests,
+					std::size_t &sendRequestsCounter,
+					double **commMatrix,
+					int **schedule,
+					int **compAmounts,
+					int *commDataChunkSend,
+					int *commDataChunkRecv,
+					double stamp,
+					std::string &htmlFileString)
 {
 	task.setID(members[taskCounter]);
-	task.waitUnlocksViaRecv(commMatrix, schedule, stamp);
-	task.compute(compAmounts, stamp);
-	task.communicate(task_dep, allocation, commDataChunk, stamp);
-	task.sendUnlocks(commMatrix, schedule, request, stamp);
+	// TODO: only for MIXED graph: task.waitUnlocksViaRecv(commMatrix, schedule, stamp);
+	// Run receives for a task only if it is not the entry task (i.e. it doesn't receive anything)
+	if ( does2DArrayContainElementIn1DGreaterThan(commMatrix, task.getID(), numOfTasks , numOfTasks, -1.0, false) )
+		task.recvCommDAGSingleBuffers(commMatrix, schedule, commDataChunkRecv, stamp, htmlFileString);
+	task.compute(compAmounts, stamp, htmlFileString);
+	// Run sends for a task only if it is not the exit task (i.e. it doesn't send anything)
+	if ( does2DArrayContainElementIn1DGreaterThan(commMatrix, task.getID(), numOfTasks , numOfTasks, -1.0, true) )
+		task.sendCommDAGSingleBuffers(commMatrix, schedule, commDataChunkSend, sendRequests, sendRequestsCounter, stamp);
+	// TODO: only for MIXED graph: task.communicate(task_dep, allocation, commDataChunk, stamp);
+	// TODO: only for MIXED graph: task.sendUnlocks(commMatrix, schedule, request, stamp);
 }
 
 
